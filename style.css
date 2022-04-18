@@ -1,0 +1,10 @@
+:root {
+    --poppin-font: 'Poppins', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0rem;
+    margin: 0rem;
+    font-family: var(--poppin-font);
+}
