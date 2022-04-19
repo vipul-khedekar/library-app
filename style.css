@@ -23,5 +23,42 @@ body {
     grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: antiquewhite;
+    background-color: #faebd7;
+}
+
+.backdrop-container p {
+    flex: 1;
+    border: 0.5rem double #000000;
+    padding: 1rem;
+    margin: 10rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.backdrop-container form {
+    display: block;
+    flex: 1;
+    width: 40vw;
+    margin: 10rem;
+    margin-left: auto;
+}
+
+fieldset input {
+    height: 1.5rem;
+    margin: 5px;
+}
+
+form button {
+    background-color: #f58023;
+    height: 2rem;
+    width: 6rem;
+    margin-top: 2px;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+form button:hover {
+    border: 1px solid #ffffff;
 }
