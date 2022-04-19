@@ -62,3 +62,54 @@ form button {
 form button:hover {
     border: 1px solid #ffffff;
 }
+
+.book-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #faebd7;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+th {
+    height: 1.5rem;
+    background-color: #f58126;
+    border: 1px solid #000000;
+    padding: 0.5rem;
+}
+
+th:nth-child(1) {
+    /*Title*/
+    width: 28vw;
+}
+
+th:nth-child(2) {
+    /*Author*/
+    width: 28vw;
+}
+
+th:nth-child(3) {
+    /*Price*/
+    width: 10vw;
+}
+
+th:nth-child(4) {
+    /*Status*/
+    width: 20vw;
+}
+
+td {
+    height: 1.5rem;
+    width: fit-content;
+    background-color: #d0d0d0;
+    border: 1px solid #000000;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+td button {
+    margin: 3px;
+}
