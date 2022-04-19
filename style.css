@@ -8,3 +8,20 @@ body {
     margin: 0rem;
     font-family: var(--poppin-font);
 }
+
+.library-container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 40vh 60vh;
+}
+
+.backdrop-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: antiquewhite;
+}
