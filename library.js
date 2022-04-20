@@ -15,7 +15,11 @@ form.addEventListener(`submit`, (e) => {
     e.preventDefault();
     let title = formTitle.value;
     let author = formAuthor.value;
-    let price = formPrice.value;
+
+    let price = `${formPrice.value} INR`;
+    if(formPrice.value === `` || formPrice.value == 0) {
+        price = `0 INR`;
+    }
 
     let status;
     if(formStatus.checked) {
