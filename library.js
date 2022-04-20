@@ -1,8 +1,9 @@
 const form = document.querySelector(`[data-form]`);
-const formTitle = document.querySelector(`[data-form-title]`)
-const formAuthor = document.querySelector(`[data-form-author]`)
-const formPrice = document.querySelector(`[data-form-price]`)
-const formStatus = document.querySelector(`[data-form-status]`)
+const formTitle = document.querySelector(`[data-form-title]`);
+const formAuthor = document.querySelector(`[data-form-author]`);
+const formPrice = document.querySelector(`[data-form-price]`);
+const formStatus = document.querySelector(`[data-form-status]`);
+const displayTable = document.querySelector(`[data-display-table]`);
 
 function BOOK(title, author, price, status) {
     //constructor template
@@ -26,8 +27,18 @@ DISPLAY.prototype.clear = function() {
     // form.reset();                To reset form input fields in single command.
 }
 
-DISPLAY.prototype.add = function() {
-
+DISPLAY.prototype.add = function(book) {
+    //creating template string which appends as collection of DOM elements in one go to the container.
+    let htmlTemplateString = `<tr>
+                                <td>${book.title}</td>
+                                <td>${book.author}</td>
+                                <td>${book.price}</td>
+                                <td>${book.status}<br>
+                                    <button type="button">Toggle</button>
+                                    <button type="button">Delete</button>
+                                </td>
+                            </tr>`;
+    displayTable.innerHTML = displayTable.innerHTML + htmlTemplateString;
 }
 
 form.addEventListener(`submit`, (e) => {
@@ -50,6 +61,6 @@ form.addEventListener(`submit`, (e) => {
     const book = new BOOK(title, author, price, status);
     
     const display = new DISPLAY();
-    display.add();
+    display.add(book);
     display.clear();
 });
