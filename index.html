@@ -21,11 +21,11 @@
             <form data-form id="book-entry" action="#" method="get">
                 <fieldset>
                     <label for="title">Title:</label>
-                    <input data-form-title id="title" type="text" name="title" placeholder="The Annihilation" autocomplete="off"><br>
+                    <input data-form-title id="title" type="text" name="title" placeholder="The Annihilation" autocomplete="off" required><br>
                     <label for="author">Author:</label>
-                    <input data-form-author id="author" type="text" name="author" placeholder="Jeff VanderMeer" autocomplete="off"><br>
-                    <label for="price">Price:</label>
-                    <input data-form-price id="price" type="text" name="price" pattern="[0-9]" placeholder="123" autocomplete="off"><br>
+                    <input data-form-author id="author" type="text" name="author" placeholder="Jeff VanderMeer" autocomplete="off" required><br>
+                    <label for="price">Price(INR):</label>
+                    <input data-form-price id="price" type="text" name="price" pattern="[0-9]{0,}" placeholder="123" autocomplete="off"><br>
                     <label for="read-check">Have you read:</label>
                     <input data-form-status id="read-check" type="checkbox" name="read-check" autocomplete="off">
                 </fieldset>
