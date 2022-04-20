@@ -5,11 +5,19 @@ const formPrice = document.querySelector(`[data-form-price]`)
 const formStatus = document.querySelector(`[data-form-status]`)
 
 function BOOK(title, author, price, status) {
+    //constructor template
     this.title = title;
     this.author = author;
     this.price = price;
     this.status = status;
 }
+
+function DISPLAY(){
+    //constructor for output
+}
+
+//methods for constructor
+
 
 form.addEventListener(`submit`, (e) => {
     e.preventDefault();
@@ -27,6 +35,10 @@ form.addEventListener(`submit`, (e) => {
     } else {
         status = `unread`;
     }
+
     const book = new BOOK(title, author, price, status);
-    console.log(book);
+    
+    const display = new DISPLAY();
+    display.add();
+    display.clear();
 });
