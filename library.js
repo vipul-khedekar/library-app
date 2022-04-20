@@ -17,7 +17,18 @@ function DISPLAY(){
 }
 
 //methods for constructor
+//prototype sharing/passing to methods
+DISPLAY.prototype.clear = function() {
+    formTitle.value = ``;
+    formAuthor.value = ``;
+    formPrice.value = ``;
+    formStatus.checked = false;
+    // form.reset();                To reset form input fields in single command.
+}
 
+DISPLAY.prototype.add = function() {
+
+}
 
 form.addEventListener(`submit`, (e) => {
     e.preventDefault();
