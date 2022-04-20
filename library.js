@@ -10,3 +10,19 @@ function BOOK(title, author, price, status) {
     this.price = price;
     this.status = status;
 }
+
+form.addEventListener(`submit`, (e) => {
+    e.preventDefault();
+    let title = formTitle.value;
+    let author = formAuthor.value;
+    let price = formPrice.value;
+
+    let status;
+    if(formStatus.checked) {
+        status = `read`;
+    } else {
+        status = `unread`;
+    }
+    const book = new BOOK(title, author, price, status);
+    console.log(book);
+});
